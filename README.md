@@ -671,10 +671,7 @@ B.Tech — Computer Science and Engineering
 
 </div>
 
-- **GitHub Profile:** `chandtarun10`
-
-Replace the placeholder with your actual GitHub profile URL before
-publishing the README.
+- **GitHub Profile:** `[chandtarun10](https://github.com/chandtarun10)`
 
 ---
 
