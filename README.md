@@ -665,13 +665,9 @@ they are already implemented.
 
 ### Tarun Chand
 
-**Developer of DataLens**
-
-B.Tech — Computer Science and Engineering
-
 </div>
 
-- **GitHub Profile:** `[chandtarun10](https://github.com/chandtarun10)`
+- **GitHub Profile:** `https://github.com/chandtarun10`
 
 ---
 
