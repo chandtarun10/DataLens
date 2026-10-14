@@ -29,13 +29,9 @@ generate downloadable reports through a unified dashboard.
 - [9. Implementation Overview](#-9-implementation-overview)
 - [10. Supported File Formats](#-10-supported-file-formats)
 - [11. Configuration](#-11-configuration)
-- [12. Deployment](#-12-deployment)
-- [13. Security and Data Handling](#-13-security-and-data-handling)
-- [14. Troubleshooting](#-14-troubleshooting)
-- [15. Future Improvements](#-15-future-improvements)
-- [16. Developer](#-16-developer)
-- [17. License](#-17-license)
-- [18. Acknowledgements](#-18-acknowledgements)
+- [12. Troubleshooting](#-14-troubleshooting)
+- [13. Future Improvements](#-15-future-improvements)
+- [14. Developer](#-16-developer)
 
 ---
 
@@ -255,34 +251,6 @@ DataLens follows a frontend-backend workflow.
 
 The application is organized into separate frontend and backend
 directories.
-
-```text
-DataLens/
-│
-├── frontend/
-│   ├── app/
-│   │
-│   ├── components/
-│   │
-│   ├── lib/
-│   │
-│   ├── public/
-│   │
-│   ├── types/
-│   │
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── next.config.*
-│   ├── tsconfig.json
-│   └── ...
-│
-├── backend/
-│   ├── Python application files
-│   ├── requirements.txt
-│   └── ...
-│
-└── README.md
-```
 
 ### Frontend Directory
 
@@ -534,7 +502,7 @@ The backend uses Python and FastAPI.
 FastAPI provides the API layer through which the frontend
 communicates with the backend processing logic.
 
-Its responsibilities include:
+It's responsibilities include:
 
 - Receiving frontend requests.
 - Handling uploaded files.
@@ -628,97 +596,7 @@ for production configuration.
 
 ---
 
-## ☁️ 12. Deployment
-
-The frontend and backend can be deployed independently.
-
-One possible deployment setup is:
-
-| Component | Suggested Platform |
-|---|---|
-| Next.js frontend | Vercel |
-| FastAPI backend | Render |
-| Source code | GitHub |
-
-### Frontend Deployment
-
-1. Push the project to your GitHub repository.
-2. Import the repository into Vercel.
-3. If the repository contains separate frontend and backend folders,
-   set the frontend directory as the frontend project's root.
-4. Confirm that Vercel detects Next.js.
-5. Configure the production backend API address using the
-   environment-variable name expected by the frontend.
-6. Deploy the application.
-
-### Backend Deployment
-
-1. Create a Python web service on Render.
-2. Select the repository containing the backend code.
-3. Set the backend directory as the service root if required.
-4. Configure dependency installation using the actual requirements
-   file.
-5. Configure the start command using the actual FastAPI entry point.
-6. Set any required environment variables.
-7. Deploy the backend.
-
-For example, if the backend contains `main.py` with a FastAPI
-instance named `app`, a possible start command is:
-
-```bash
-uvicorn main:app --host 0.0.0.0 --port $PORT
-```
-
-This command is only an example. Replace `main:app` with the
-actual module and instance names used by the backend.
-
-### Connect the Frontend and Backend
-
-After deploying both services:
-
-1. Copy the deployed backend URL.
-2. Configure the frontend API address using the variable expected
-   by the code.
-3. Configure backend CORS to allow the deployed frontend origin.
-4. Redeploy the frontend if environment variables changed.
-5. Verify file uploads and analysis requests.
-6. Verify data preview and PDF, Excel, and CSV downloads.
-
-### Deployment Checklist
-
-- [ ] Frontend deployment succeeds.
-- [ ] Backend deployment succeeds.
-- [ ] Production API URL is correct.
-- [ ] Backend CORS allows the frontend origin.
-- [ ] CSV upload works.
-- [ ] Excel upload works.
-- [ ] Analysis results load.
-- [ ] Data preview works.
-- [ ] Available exports download successfully.
-
----
-
-## 🔐 13. Security and Data Handling
-
-When deploying a file-analysis application, consider the following:
-
-- Validate uploaded file types and contents.
-- Set reasonable file-size and processing limits.
-- Handle malformed or unsupported files safely.
-- Avoid exposing internal error traces in production.
-- Restrict CORS to trusted frontend origins.
-- Keep secrets and credentials out of source control.
-- Review how uploaded files and generated reports are stored.
-- Establish appropriate retention and deletion behavior.
-- Avoid uploading confidential datasets unless the deployment's
-  data-handling arrangements are suitable.
-
-These are recommended considerations. Actual protections depend
-on the implemented code and hosting configuration.
-
----
-
-## 🧯 14. Troubleshooting
+## 🧯 12. Troubleshooting
 
 ### `package.json` Cannot Be Found
 
@@ -763,7 +641,7 @@ work unless that directory contains its own `package.json`.
 
 ---
 
-## 🔮 15. Future Improvements
+## 🔮 13. Future Improvements
 
 Potential future enhancements include:
 
@@ -781,7 +659,7 @@ they are already implemented.
 
 ---
 
-## 👨‍💻 16. Developer
+## 👨‍💻 14. Developer
 
 <div align="center">
 
@@ -793,40 +671,10 @@ B.Tech — Computer Science and Engineering
 
 </div>
 
-- **GitHub Profile:** `<YOUR_GITHUB_PROFILE_URL>`
+- **GitHub Profile:** `chandtarun10`
 
 Replace the placeholder with your actual GitHub profile URL before
 publishing the README.
-
----
-
-## 📄 17. License
-
-**License: Not yet specified.**
-
-Before publishing the project as open source, choose a license and
-add the corresponding `LICENSE` file to the repository.
-
-Do not claim that DataLens is MIT-licensed or licensed under another
-specific license unless that license has actually been selected
-and included.
-
-Until a license is provided, others should not assume they have
-permission to reuse, modify, or redistribute the project.
-
----
-
-## 🙌 18. Acknowledgements
-
-DataLens uses the frameworks and libraries listed in the
-Technology Stack section.
-
-Thanks to the developers and maintainers of these open-source
-tools for providing the technologies that support modern web
-development, data processing, visualization, and report generation.
-
-Please refer to each dependency's official documentation and
-license for its usage terms.
 
 ---
 
