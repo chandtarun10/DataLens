@@ -62,7 +62,7 @@ export function UploadHero({
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
       className={cn(
-        'relative rounded-2xl border-2 border-dashed bg-card/60 p-6 transition-all duration-300 sm:p-8',
+  'relative w-full min-w-0 max-w-full rounded-2xl border-2 border-dashed bg-card/60 p-4 transition-all duration-300 sm:p-8',
         dragging
           ? 'scale-[1.01] border-primary bg-accent/50 glow-primary'
           : 'border-border hover:border-primary/50',
@@ -215,13 +215,13 @@ export function UploadHero({
         className="absolute -top-32 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl"
         aria-hidden
       />
-      <div className="relative grid gap-10 px-6 py-12 sm:px-10 lg:grid-cols-2 lg:items-center lg:py-16">
+      <div className="relative grid min-w-0 grid-cols-1 gap-8 px-4 py-8 sm:gap-10 sm:px-10 sm:py-12 lg:grid-cols-2 lg:items-center lg:py-16">
         <div className="flex flex-col gap-5">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
             <span className="size-1.5 rounded-full bg-primary" aria-hidden />
             Automated data quality analysis
           </span>
-          <h1 id="hero-title" className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h1 id="hero-title" className="text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
             Upload. Analyze.{' '}
             <span className="bg-gradient-to-r from-primary to-info bg-clip-text text-transparent">
               Visualize.
