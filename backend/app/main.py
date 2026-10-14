@@ -18,6 +18,7 @@ app.add_middleware(
         'http://127.0.0.1:5173',
         'https://datalens-vercel.app',
         'https://data-lens-jm2iqnf5r-chandtarun1234-7695.vercel.app',
+        'https://data-lens-tawny.vercel.app',
     ],
     allow_credentials=True,
     allow_methods=['*'],
