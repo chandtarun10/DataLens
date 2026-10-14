@@ -667,8 +667,6 @@ they are already implemented.
 
 </div>
 
-- **GitHub Profile:** `https://github.com/chandtarun10`
-
 ---
 
 <div align="center">
