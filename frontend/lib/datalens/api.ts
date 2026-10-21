@@ -4,8 +4,6 @@ export const API_BASE = (
   process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 ).replace(/\/+$/, '')
 
-export const MAX_FILE_BYTES = 10 * 1024 * 1024
-
 export const ALLOWED_EXTENSIONS = ['.csv', '.xls', '.xlsx'] as const
 
 export class ApiError extends Error {
@@ -24,10 +22,6 @@ export function validateFile(file: File): string | null {
 
   if (!ALLOWED_EXTENSIONS.includes(ext as (typeof ALLOWED_EXTENSIONS)[number])) {
     return 'Unsupported file type. Please upload a .csv, .xls, or .xlsx file.'
-  }
-
-  if (file.size > MAX_FILE_BYTES) {
-    return 'File is too large. Maximum supported size is 10MB.'
   }
 
   if (file.size === 0) {
