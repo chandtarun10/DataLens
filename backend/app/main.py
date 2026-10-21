@@ -25,8 +25,6 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-
-MAX_BYTES = 10 * 1024 * 1024
 ALLOWED = {'.csv', '.xlsx', '.xls'}
 
 
@@ -51,12 +49,6 @@ async def read_upload(file: UploadFile):
         )
 
     data = await file.read()
-
-    if len(data) > MAX_BYTES:
-        raise HTTPException(
-            400,
-            'File is too large. Maximum supported size is 10MB.'
-        )
 
     if not data:
         raise HTTPException(
