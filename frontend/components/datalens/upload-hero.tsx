@@ -103,7 +103,7 @@ export function UploadHero({
             Choose File
           </Button>
           <p className="text-xs text-muted-foreground">
-            Supported formats: .csv, .xls, .xlsx &middot; Maximum size: 10MB
+            Supported formats: .csv, .xls, .xlsx;
           </p>
         </div>
       ) : (
